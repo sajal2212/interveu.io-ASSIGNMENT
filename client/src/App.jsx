@@ -5,7 +5,7 @@ import PersonaSelection from './components/PersonaSelection';
 import StudentDashboard from './components/StudentDashboard';
 import TeacherDashboard from './components/TeacherDashboard';
 import { setSocket } from './store/appSlice';
-import config from './config'; // Import the config
+import config from './config';
 import './App.css';
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
   const [connectionStatus, setConnectionStatus] = useState('disconnected');
 
   useEffect(() => {
-    // Use the config URL instead of hardcoded localhost
     console.log('Attempting to connect to:', config.apiUrl);
     
     const newSocket = io(config.apiUrl, {
@@ -49,6 +48,16 @@ function App() {
     };
   }, [dispatch]);
 
+  // Make sure this function is properly defined
+  const handlePersonaSelection = (persona) => {
+    console.log('App: Persona selected:', persona);
+    if (persona === 'teacher' || persona === 'student') {
+      setCurrentView(persona);
+    } else {
+      console.error('Invalid persona selected:', persona);
+    }
+  };
+
   if (connectionStatus === 'disconnected') {
     return (
       <div className="app-loading">
@@ -81,7 +90,7 @@ function App() {
   return (
     <div className="app">
       {currentView === 'persona' && (
-        <PersonaSelection onSelectPersona={setCurrentView} />
+        <PersonaSelection onSelectPersona={handlePersonaSelection} />
       )}
       {currentView === 'student' && (
         <StudentDashboard socket={socket} />
