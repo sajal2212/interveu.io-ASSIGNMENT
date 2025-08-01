@@ -1,29 +1,27 @@
 {
-    "name": "live-polling-system",
-    "version": "1.0.0",
-    "type": "module",
-    "description": "Real-time live polling system with React frontend and Node.js backend",
-    "main": "server/server.js",
-    "scripts": {
-      "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
-      "server:dev": "cd server && npm run dev",
-      "client:dev": "cd client && npm run dev",
-      "server": "cd server && npm start",
-      "client": "cd client && npm run preview",
-      "build": "cd client && npm install && npm run build",
-      "start": "cd server && npm start",
-      "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-      "heroku-postbuild": "cd client && npm install && npm run build"
-    },
-    "keywords": ["polling", "real-time", "react", "nodejs", "socket.io"],
-    "author": "Your Name",
-    "license": "MIT",
-    "dependencies": {
-      "concurrently": "^8.2.2"
-    },
-    "engines": {
-      "node": ">=18.0.0",
-      "npm": ">=8.0.0"
-    }
+  "name": "live-polling-system",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Real-time live polling system with React frontend and Node.js backend",
+  "private": true,
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "cd client && npm run preview",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run preview",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": ["polling", "real-time", "react", "nodejs", "socket.io"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": ">=8.0.0"
   }
-  
+}
