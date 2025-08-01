@@ -1,6 +1,6 @@
 const config = {
   apiUrl: process.env.NODE_ENV === 'production' 
-    ? 'https://your-render-backend-url.onrender.com'  // Replace with your actual Render URL
+    ? 'https://interveu-io-assignment.onrender.com' 
     : 'http://localhost:3001'
 };
 
