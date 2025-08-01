@@ -17,7 +17,8 @@ const io = new Server(server, {
     origin: [
       "http://localhost:5173", 
       "http://127.0.0.1:5173",
-      "https://interveu-io-assignment.onrender.com" // Replace with your actual Render domain
+      "https://interveu-io-assignment-git-main-sajals-projects-b8158346.vercel.app",
+      "https://interveu-io-assignment.onrender.com"
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -33,10 +34,12 @@ app.use(cors({
   origin: [
     "http://localhost:5173", 
     "http://127.0.0.1:5173",
-    "https://your-app-name.onrender.com"
+    "https://interveu-io-assignment-git-main-sajals-projects-b8158346.vercel.app",
+    "https://interveu-io-assignment.onrender.com"
   ],
   credentials: true
 }));
+
 app.use(express.json());
 
 // Serve static files from client build
