@@ -17,7 +17,7 @@ const io = new Server(server, {
     origin: [
       "http://localhost:5173", 
       "http://127.0.0.1:5173",
-      "https://your-app-name.onrender.com" // Replace with your actual Render domain
+      "https://interveu.io-backend.onrender.com" // Replace with your actual Render domain
     ],
     methods: ["GET", "POST"],
     credentials: true,
