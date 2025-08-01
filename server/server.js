@@ -18,6 +18,7 @@ const io = new Server(server, {
       "http://localhost:5173", 
       "http://127.0.0.1:5173",
       "https://interveu-io-assignment-git-main-sajals-projects-b8158346.vercel.app",
+      "https://interveu-io-assignment.vercel.app/",
       "https://interveu-io-assignment.onrender.com"
     ],
     methods: ["GET", "POST"],
@@ -35,6 +36,7 @@ app.use(cors({
     "http://localhost:5173", 
     "http://127.0.0.1:5173",
     "https://interveu-io-assignment-git-main-sajals-projects-b8158346.vercel.app",
+    "https://interveu-io-assignment.vercel.app/",
     "https://interveu-io-assignment.onrender.com"
   ],
   credentials: true
